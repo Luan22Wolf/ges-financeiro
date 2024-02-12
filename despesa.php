@@ -32,7 +32,7 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
   </header>
 
   <main>
-    <form action="cadastrarReceita.php" method="get">
+    <form action="cadastrarDespesa.php" method="get">
       <label>
         Descrição
         <input type="text" name="descricao" required>

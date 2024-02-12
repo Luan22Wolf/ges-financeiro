@@ -47,7 +47,7 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
         Categoria
         <select name="categoria">
           <option value="despesa">Despesa</option>
-          <option value="receita">Receita</option>
+          
         </select>
       </label>
 
