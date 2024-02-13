@@ -34,7 +34,7 @@ $dado = $sql->fetch(PDO::FETCH_ASSOC);
   </header>
 
   <main>
-    <form action="confirmarEdicaoReceita.php" method="get">
+    <form action="confirmarEdicaoDespesa.php" method="get">
       <input type="hidden" name="id" value="<?= $dado['id']; ?>">
       <label>
         Descrição

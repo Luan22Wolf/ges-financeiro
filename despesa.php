@@ -8,6 +8,11 @@ $sql->execute();
 
 $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 
+$sql = "SELECT SUM(valor) as valor FROM despesa";
+$sql = $pdo->prepare($sql);
+$sql->execute();
+$total_receita = $sql->fetch(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +37,9 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
   </header>
 
   <main>
+    <span class="total">
+      <p>Total de Receita: R$<?= $total_receita["valor"]?></p>
+    </span>
     <form action="cadastrarDespesa.php" method="get">
       <label>
         Descrição
@@ -64,11 +72,11 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
       <thead>
         <tr>
           <th>ID</th>
-          <th>Descrição</th>
-          <th>Valor</th>
-          <th>Data</th>
-          <th>Categoria</th>
-          <th>Opções</th>
+          <th>Descrição &#x1F4DD;</th>
+          <th>Valor &#x1F4B2;</th>
+          <th>Data &#x1F4C5;</th>
+          <th>Categoria &#x1F354;</th>
+          <th>Opções &#x2699;</th>
         </tr>
       </thead>
       <tbody>

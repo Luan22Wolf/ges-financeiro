@@ -46,8 +46,8 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
       <thead>
         <tr>
           <th>ID</th>
-          <th>Descrição</th>
-          <th>Opções</th>
+          <th>Descrição &#x1F4DD;</th>
+          <th>Opções &#x2699;</th>
         </tr>
       </thead>
       <tbody>
@@ -60,6 +60,7 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
               <a href="./editarCategoria.php?id=<?= $dado['id'] ?>" class="btn-editar"><i class="fa-solid fa-pen-to-square"></i></a>
               <a href="./status_pago.php?id=<?= $dado['id'] ?>" class="check"><i class="fi fi-br-check" a>
 ></i></a>
+            </td>
           </tr>          
         <?php endforeach; ?>
       </tbody>

@@ -23,5 +23,5 @@ $sql->bindValue(":categoria", 1);
 $sql->bindValue(":data_mvto", $data_mvto);
 $sql->execute();
 
-header("Location: receitas.php");
+header("Location: despesa.php");
 exit;

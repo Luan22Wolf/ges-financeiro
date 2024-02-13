@@ -64,7 +64,7 @@ button {
 }
 
 button:hover {
-  background: #9372fe;
+  background: #6d44f1;
 }
 
 table {
@@ -76,7 +76,7 @@ table {
 table,
 th,
 td {
-  border: 1px solid #724af5;
+  border: 1px solid #5036a5;
   border-collapse: collapse;
 }
 
@@ -108,9 +108,31 @@ td {
 }
 
 .check{
-  color: rgb(16, 243, 8);
+  color: rgb(4, 42, 2);
 }
 
 .check:hover{
-  color: rgb(106, 255, 0);
+  color: rgb(134, 236, 61);
+  cursor: pointer;
+}
+
+.x{
+  color: rgb(239, 31, 31);
+}
+
+.x:hover{
+  color: rgb(237, 124, 124);
+  cursor: pointer;
+}
+
+.total{
+  text-align: center;
+  min-width: 100%;
+  display: inline-block;
+  margin-bottom: 2rem;
+  background-color: #8966fc;
+  padding: 1rem;
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 0.5rem solid #ff7f00;
 }

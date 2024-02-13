@@ -1,0 +1,18 @@
+$sql = "SELECT 
+    receita.id AS receita_id,
+    receita.descricao AS receita_descricao,
+    receita.valor AS receita_valor,
+    receita.data_mvto AS receita_data_mvto,
+    categoria.id AS categoria_id,
+    categoria.descrição AS categoria_descricao
+    FROM receita 
+    INNER JOIN categoria ON 
+    receita.categoria_id = categoria.id";
+$sql = $pdo->prepare($sql);
+$sql->execute();
+
+$sql = "SELECT * FROM receita";
+$sql = $pdo->prepare($sql);
+$sql->execute();
+
+<i class="fi fi-br-check"></i></a>
