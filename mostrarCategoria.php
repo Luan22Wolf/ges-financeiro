@@ -56,7 +56,12 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
             <td><?= $dado['id'] ?></td>
             <td><?= $dado['descrição'] ?></td>
             <td>
-              <a href="./deletarCategoria.php?id=<?= $dado['id'] ?>"><i class="btn-deletar fa-solid fa-trash"></i></a>
+              
+
+              <a href="./deletarCategoria.php?id=<?= $dado['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir esta Categoria ?');">
+                        <i class="btn-deletar fa-solid fa-trash"></i>
+                    </a>
+
               <a href="./editarCategoria.php?id=<?= $dado['id'] ?>" class="btn-editar"><i class="fa-solid fa-pen-to-square"></i></a>
               <a href="./status_pago.php?id=<?= $dado['id'] ?>" class="check"><i class="fi fi-br-check" a>
 ></i></a>
