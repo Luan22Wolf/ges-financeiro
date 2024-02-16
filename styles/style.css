@@ -107,23 +107,22 @@ td {
   color: rgb(11, 11, 255);
 }
 
-.check{
-  color: rgb(4, 42, 2);
+.check {
+  color: rgb(4, 42, 2); 
 }
 
-.check:hover{
+.check:hover {
   color: rgb(134, 236, 61);
-  cursor: pointer;
 }
 
-.x{
-  color: rgb(239, 31, 31);
+.x {
+  color: rgb(239, 31, 31); 
 }
 
-.x:hover{
-  color: rgb(237, 124, 124);
-  cursor: pointer;
+.x:hover {
+  color: rgb(237, 124, 124); 
 }
+
 
 .total{
   text-align: center;
@@ -136,3 +135,4 @@ td {
   color: #fff;
   border-bottom: 0.5rem solid #ff7f00;
 }
+
