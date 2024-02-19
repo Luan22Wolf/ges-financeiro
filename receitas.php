@@ -82,9 +82,13 @@ $total_receita = $sql->fetch(PDO::FETCH_ASSOC);
         </tr>
         </thead>
         <tbody>
+        <?php
+        // Inicializar o contador de IDs das linhas
+        $linha_id = 1;
+        ?>
         <?php foreach ($dados as $dado) : ?>
-            <tr>
-                <td><?= $dado['id'] ?></td>
+            <tr id="linha<?= $linha_id ?>">
+                <td><?= $linha_id ?></td>
                 <td><?= $dado['descricao'] ?></td>
                 <td><?= $dado['valor'] ?></td>
                 <td><?= $dado['data_mvto'] ?></td>
@@ -94,14 +98,18 @@ $total_receita = $sql->fetch(PDO::FETCH_ASSOC);
                         <i class="btn-deletar fa-solid fa-trash"></i>
                     </a>
                     <a href="./editarReceita.php?id=<?= $dado['id'] ?>" class="btn-editar"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="./status_pago.php?id=<?= $dado['id'] ?>" class="check">&#x2713;</a>
-                    <a href="./status_pago.php?id=<?= $dado['id'] ?>" class="x">&#x2717;</a>
+                    <a href="#=<?= $dado['id'] ?>" class="check">&#x2713;</a>
+                    <a href="#=<?= $dado['id'] ?>" class="x">&#x2717;</a>
                 </td>
             </tr>
+            <?php 
+            // Incrementar o contador de IDs das linhas
+            $linha_id++; 
+            ?>
         <?php endforeach; ?>
         </tbody>
     </table>
-    
+
 </main>
 <script src="https://kit.fontawesome.com/561265e797.js" crossorigin="anonymous"></script>
 </body>

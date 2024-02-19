@@ -108,19 +108,23 @@ td {
 }
 
 .check {
-  color: rgb(4, 42, 2); 
+  color: rgb(12, 35, 11); 
+  text-decoration: none;
 }
 
-.check:hover {
+.check:hover,
+.check:active {
   color: rgb(134, 236, 61);
 }
 
 .x {
-  color: rgb(239, 31, 31); 
+  color: rgb(225, 131, 131); 
+  text-decoration: none;
 }
 
-.x:hover {
-  color: rgb(237, 124, 124); 
+.x:hover,
+.check:active  {
+  color: rgb(244, 11, 11); 
 }
 
 
