@@ -20,6 +20,7 @@ $total_receita = $sql->fetch(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="retomar.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Receitas</title>
 </head>
@@ -28,9 +29,9 @@ $total_receita = $sql->fetch(PDO::FETCH_ASSOC);
 <header>
     <nav>
         <ul>
-            <li><a href="mostrarCategoria.php">categoria</a></li>
-            <li><a href="receitas.php">receita</a></li>
-            <li><a href="despesa.php">despesa</a></li>
+            <li><a href="mostrarCategoria.php">Categoria</a></li>
+            <li><a href="receitas.php">Receita</a></li>
+            <li><a href="despesa.php">Despesa</a></li>
         </ul>
     </nav>
 </header>

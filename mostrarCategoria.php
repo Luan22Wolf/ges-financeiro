@@ -16,6 +16,7 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="retomar.png" type="image/x-icon">
   <link rel="stylesheet" href="./styles/style.css">
   <title>Receitas</title>
 </head>
@@ -24,9 +25,9 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
   <header>
     <nav>
       <ul>
-        <li><a href="mostrarCategoria.php">categoria</a></li>
-        <li><a href="receitas.php">receita</a></li>
-        <li><a href="despesa.php">despesa</a></li>
+        <li><a href="mostrarCategoria.php">Categoria</a></li>
+        <li><a href="receitas.php">Receita</a></li>
+        <li><a href="despesa.php">Despesa</a></li>
       </ul>
     </nav>
   </header>
@@ -57,11 +58,9 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
             <td><?= $dado['descrição'] ?></td>
             <td>
               
-
               <a href="./deletarCategoria.php?id=<?= $dado['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir esta Categoria ?');">
                         <i class="btn-deletar fa-solid fa-trash"></i>
                     </a>
-
               <a href="./editarCategoria.php?id=<?= $dado['id'] ?>" class="btn-editar"><i class="fa-solid fa-pen-to-square"></i></a>
               <a href="./status_pago.php?id=<?= $dado['id'] ?>" class="check"><i class="fi fi-br-check" a>
 ></i></a>

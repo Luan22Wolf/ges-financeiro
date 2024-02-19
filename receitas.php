@@ -20,6 +20,7 @@ $total_receita = $sql->fetch(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="retomar.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Gerenciador Financeiro</title>
 </head>
@@ -28,9 +29,9 @@ $total_receita = $sql->fetch(PDO::FETCH_ASSOC);
 <header>
     <nav>
         <ul>
-            <li><a href="mostrarCategoria.php">categoria</a></li>
-            <li><a href="receitas.php">receita</a></li>
-            <li><a href="despesa.php">despesa</a></li>
+            <li><a href="mostrarCategoria.php">Categoria</a></li>
+            <li><a href="receitas.php">Receita</a></li>
+            <li><a href="despesa.php">Despesa</a></li>
         </ul>
     </nav>
 </header>
@@ -52,11 +53,12 @@ $total_receita = $sql->fetch(PDO::FETCH_ASSOC);
         </label>
 
         <label>
-            Categoria
-            <select name="categoria">
-                <option value="despesa">Despesa</option>
-
-            </select>
+    Categoria
+    <select name="categoria" required>        
+        <?php foreach ($dados as $dado) : ?>
+            <option value="<?= $dado['id'] ?>"><?= $dado['descricao'] ?></option>
+        <?php endforeach; ?>
+    </select>
         </label>
 
         <label>
@@ -65,7 +67,7 @@ $total_receita = $sql->fetch(PDO::FETCH_ASSOC);
         </label>
 
         <button type="submit">Adicionar</button>
-
+        
     </form>
 
     <table>
@@ -87,8 +89,7 @@ $total_receita = $sql->fetch(PDO::FETCH_ASSOC);
                 <td><?= $dado['valor'] ?></td>
                 <td><?= $dado['data_mvto'] ?></td>
                 <td><?= $dado['categoria_id'] ?></td>
-                <td>
-                    <!-- Adicionando a confirmação -->
+                <td>                  
                     <a href="./deletarReceita.php?id=<?= $dado['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir esta receita?');">
                         <i class="btn-deletar fa-solid fa-trash"></i>
                     </a>
@@ -100,7 +101,7 @@ $total_receita = $sql->fetch(PDO::FETCH_ASSOC);
         <?php endforeach; ?>
         </tbody>
     </table>
-
+    
 </main>
 <script src="https://kit.fontawesome.com/561265e797.js" crossorigin="anonymous"></script>
 </body>
